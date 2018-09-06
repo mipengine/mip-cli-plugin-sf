@@ -1,0 +1,17 @@
+{
+  "name": "mip-cli-plugin-sf",
+  "version": "1.0.0",
+  "description": "Enable offline SF",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wangyisheng@outlook.com",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "fs-extra": "^7.0.0",
+    "koa": "^2.5.2",
+    "koa-router": "^7.4.0",
+    "opn": "^5.3.0"
+  }
+}
