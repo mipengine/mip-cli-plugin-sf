@@ -3,6 +3,8 @@
  * @author wangyisheng@baidu.com (wangyisheng)
  */
 
+const opn = require('opn')
+const chalk = require('chalk')
 const SFServer = require('../lib/SFServer')
 
 module.exports = {
@@ -28,12 +30,31 @@ module.exports = {
         '    $ mip2 sf -o'
       ].join('\n')
     },
-    main (args, opts) {
+    main (args, options) {
       let port = options.port || 8210
       let autoopen = options.autoopen || false
 
-      let server = new SFServer({port, autoopen})
-      server.run()
+      let server = new SFServer({port})
+
+      try {
+        server.run()
+
+        console.log(chalk.green(`\n服务启动成功\n`))
+        console.log(`http://localhost:${port}/sf`)
+        console.log(`http://localhost:${port}/sf?url=xxx\n`)
+
+        if (autoopen) {
+          if (/^\//.test(autoopen)) {
+            autoopen = `http://localhost:${port}/sf`
+          }
+
+          console.log(chalk.green('正在自动打开页面\n'))
+          opn(autoopen)
+        }
+      } catch (e) {
+        console.log(chalk.red('服务启动失败'))
+        console.log(e)
+      }
     }
   }
 }
