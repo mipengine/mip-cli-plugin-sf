@@ -44,12 +44,8 @@ module.exports = {
         console.log(`http://localhost:${port}/sf?url=xxx\n`)
 
         if (autoopen) {
-          if (/^\//.test(autoopen)) {
-            autoopen = `http://localhost:${port}/sf`
-          }
-
           console.log(chalk.green('正在自动打开页面\n'))
-          opn(autoopen)
+          opn(`http://localhost:${port}/sf`)
         }
       } catch (e) {
         console.log(chalk.red('服务启动失败'))
