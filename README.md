@@ -10,19 +10,19 @@ MIP 页面在上线到搜索结果页之后，需要嵌入在 SuperFrame (简称
 
 1. 全局安装 `mip2` 命令行工具
 
-  `npm i mip2 -g`
+    `npm i mip2 -g`
 
 2. 启动线下 SF 调试环境
 
-  `mip2 sf`
+    `mip2 sf`
 
 3. 使用浏览器访问 (默认端口 8210)
 
-  `http://localhost:8210/sf`
+    `http://localhost:8210/sf`
 
 4. 在 URL 输入框 (第一个) 输入目标页面的 URL。__切记带上协议头，即 `http` 或者 `https`__
 
-  例如 `http://localhost:8111/xxx`
+    例如 `http://localhost:8111/xxx`
 
 5. 点击最下方的“出发测试”按钮
 
