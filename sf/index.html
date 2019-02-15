@@ -53,10 +53,16 @@
         window.fif = {
           action: rt.action
         };
-        let offlineSF = new rt.service()
-        offlineSF.create = () => document.querySelector('.input-wrapper').style.display = 'block'
-        offlineSF.destroy = () => document.querySelector('.input-wrapper').style.display = 'none'
-        offlineSF.getContainer = () => document.querySelector('.input-wrapper')
+        var offlineSF = new rt.service()
+        offlineSF.create = function () {
+          document.querySelector('.input-wrapper').style.display = 'block'
+        }
+        offlineSF.destroy = function () {
+          document.querySelector('.input-wrapper').style.display = 'none'
+        }
+        offlineSF.getContainer = function () {
+          return document.querySelector('.input-wrapper')
+        }
         rt.action.regist('/sf', offlineSF);
         // rt.action.regist('/', new rt.service());
 

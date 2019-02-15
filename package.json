@@ -1,6 +1,6 @@
 {
   "name": "mip-cli-plugin-sf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Enable offline SF",
   "main": "index.js",
   "scripts": {
